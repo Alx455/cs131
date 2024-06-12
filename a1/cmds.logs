@@ -1,0 +1,24 @@
+1)
+mkdir a1
+
+2)
+cd
+pwd >> ~/cs131/a1/a1.txt
+
+3)
+id >> a1.txt
+
+4)
+cd
+ls /proc | grep mem >> ~/cs131/a1/a1.txt
+
+5)
+head /proc/meminfo >> ~/cs131/a1/a1.txt
+
+6)
+head /proc/meminfo >> ~/cs131/a1/a1.txt
+
+7)
+ls /etc | grep os >> ~/cs131/a1/a1.txt
+head /etc/os-release >> ~/cs131/a1/a1.txt
+
