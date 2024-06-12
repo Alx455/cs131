@@ -1,0 +1,56 @@
+1)
+no output
+
+2)
+/mnt/scratch/alejandrosu24
+
+3)
+uid=1262(alejandrosu24) gid=1263(alejandrosu24) groups=1263(alejandrosu24)
+
+4)
+iomem
+meminfo
+
+5)
+MemTotal:       73080640 kB
+MemFree:        29303936 kB
+MemAvailable:   45467520 kB
+Buffers:         1179968 kB
+Cached:         15602880 kB
+SwapCached:            0 kB
+Active:          5464960 kB
+Inactive:       15236928 kB
+Active(anon):    2527232 kB
+Inactive(anon):  5102976 kB
+
+6)
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:      16384 kB
+Hugetlb:               0 kB
+
+7)
+host.conf
+hostname
+hosts
+objrepos
+os-release
+sos
+yum.repos.d
+
+NAME="Red Hat Enterprise Linux"
+VERSION="8.6 (Ootpa)"
+ID="rhel"
+ID_LIKE="fedora"
+VERSION_ID="8.6"
+PLATFORM_ID="platform:el8"
+PRETTY_NAME="Red Hat Enterprise Linux 8.6 (Ootpa)"
+ANSI_COLOR="0;31"
+CPE_NAME="cpe:/o:redhat:enterprise_linux:8::baseos"
+HOME_URL="https://www.redhat.com/"
