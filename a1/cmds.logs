@@ -22,3 +22,11 @@ head /proc/meminfo >> ~/cs131/a1/a1.txt
 ls /etc | grep os >> ~/cs131/a1/a1.txt
 head /etc/os-release >> ~/cs131/a1/a1.txt
 
+8)
+awk -F, '$2 ~ /2019-05-12/ && NR > 1 {sum += $17; count++} END {print sum / count}' 2019-05.csv >> ~/cs131/a1/a1.txt
+
+9)
+awk -F, '$2 ~ /2019-05-12/ && NR > 1 {if ($17 > max) max = $17} END {print max}' 2019-05.csv >> ~/cs131/a1/a1.txt
+
+10)
+awk -F, 'NR > 1 && $4 >= 3 {print $9}' 2019-05.csv | sort | uniq -c | sort -nr | head -n 10 >> a1.txt
