@@ -1,0 +1,41 @@
+#!/bin/bash
+
+log_file="notelog"
+
+BLUE='\033[1;34m'
+
+DEFAULT='\033[0m'
+
+if [ ! -f "$log_file" ]; then
+  touch "$log_file"
+  chmod 444 "$log_file"
+  fi
+
+if [ -e "$1" ]; then
+  if grep -q "$1" "$log_file"; then
+    description=$(awk -F, -v filename="$1" '$1 == filename {print $2}' "$log_file" | sed 's/^"\(.*\)"$/\1/')
+    echo "Note for $1"
+    echo -e "${BLUE}$description${DEFAULT}"
+    echo "Would you like to overwrite the note for $1?"
+    echo "(y/n):"
+    read answer
+    if [ $answer == "y" ]; then
+      echo "Enter new note for $1: "
+      read -e -i $description new_description
+      chmod 644 "$log_file"
+      sed -i "/^$1,/d" "$log_file"
+      echo "$1,\"$new_description\"" >> "$log_file"
+      chmod 444 "$log_file"
+      echo "Note for $1 has been updated"
+    fi
+  else
+    echo "Enter note for $1: "
+    read description
+    chmod 644 "$log_file"
+    echo "$1,\"$description\"" >> "$log_file"
+    chmod 444 "$log_file"
+    echo "Note for $1 has been added"
+  fi
+else
+  echo "File/Directory does not exist"
+  fi
