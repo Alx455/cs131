@@ -14,6 +14,11 @@ This command is simply used by running the command 'note' followed
 by a file or directory name. The terminal then prompts the user to enter
 the message to attach to that file. One entered, the file or directory
 name is paired with the message in a csv file.
+If a message is already attached, the command prints out the attached
+message of the file or directory passed to it and asks the user if
+they would like to edit the message. The user input y or n accordingly.
+If the command is passed a file or directory that does not exist, a
+message is printed telling user the file or directory does not exist.
 
 Example input:
 ./note test.txt
