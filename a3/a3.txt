@@ -56,3 +56,11 @@ vendorid,tpep_pickup_datetime,tpep_dropoff_datetime,passenger_count,trip_distanc
 1,20191001 000300,20191001 001337,3,2,1,N,163,239,1,10,3,0,2,0,0,17,2
 
 4)
+SEE results.txt
+
+5)
+0.0 1580916
+1.0 307007
+2.0 265452
+1.5 91442
+2.06 90682
