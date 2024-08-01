@@ -28,12 +28,10 @@ white_wine_df = pd.read_csv(WHITE_WINE_CSV, sep=';')
 # Question 1
 print(white_wine_df.astype(int).describe())
 
-
 # Question 2
 plt.matshow(white_wine_df.corr())
 plt.title('Correlation Matrix of Wine Quality - White Dataset')
 plt.show
-
 
 # Question 3
 ax = (white_wine_df['quality']).plot.hist()
@@ -43,17 +41,14 @@ ax.set_title('Distribution of Wine Quality')
 ax.set_xlim(0, 10)
 plt.show()
 
-
 # Question 4
 features = white_wine_df.columns.drop('quality')
 for i, feature in enumerate(features):
-  plt.subplot(6, 2, i+1)
   sns.violinplot(data=white_wine_df, x = 'quality', y = feature)
   plt.xlabel('Quality')
   plt.ylabel(feature)
   plt.title(f'{feature} vs Quality')
   plt.show()
-
 
 # Question 5
 model = LinearRegression()
@@ -67,7 +62,6 @@ print(f'b0 = {model.intercept_}')
 print(f'b1 = {model.coef_[0]}')
 print(f'RMSE = {RMSE}')
 print(f'r2 = {r2}')
-
 
 # Question 6
 model = LinearRegression()
